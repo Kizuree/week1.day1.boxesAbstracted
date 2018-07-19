@@ -1,12 +1,12 @@
-const number_of_boxes_in_row = 50;
-const number_of_boxes_in_column = 10;
+const number_of_boxes_in_row = 10;
+const number_of_boxes_in_column = 1;
 
 let box_width, box_height;
 
 function setup(){
-    createCanvas(1000,600);
-    box_height = height/number_of_boxes_in_column;
-    box_width = width/number_of_boxes_in_row;
+    createCanvas(600,600);
+    box_height = height;
+    box_width = 600/10;
     // TASK #1 - set the box_width as the width of the canvas
     // divided by the number of boxes in a row.
 
@@ -15,13 +15,13 @@ function setup(){
 function draw(){
     // TASK #2 - loop through each box in the row by
     // replacing the blank with the correct number/variable
-    for(let i = 0; i < number_of_boxes_in_row ; i++){
-        //const y = box_height;
+    for(let i = 0; i < ___ ; i++){
+        const y = ___;
         // TASK #3 - replace the blank with the y-coordinate for 
         // current box
         // HINT: it will always be the same
 
-        const x = box_width*i;
+        const x = ___;
         // TASK #4 - replace the blank with the x-coordinate for 
         // current box
         // HINT: this changes with each box in the row
@@ -49,16 +49,9 @@ function draw(){
         // loop. 
         // NOTE: this is a nested "for" loop, a loop within
         // a loop! Loop-ception?
-        for(let j = 0; j < number_of_boxes_in_column ; j++){
-
-             const y =  box_height*j;
-             customFill(i,y);
-             rect(x,y,box_width,box_height);
-     
-        }
 
         // create 2nd loop here!
-        
+
         // TASK #9 - comment out the "const y" from earlier
         
         // TASK #10 - In the setup function, change the value of 
@@ -74,7 +67,9 @@ function draw(){
         // TASK #12 - cut and paste the code for drawing the box into the 2nd "for" loop
 
         // Drawing box
-       
+        customFill(i,y);
+        rect(x,y,box_width,box_height);
+
         // TASK #13 - At the top of the document change the 
         // number_of_boxes_in_column variable to another
         // number (like 20 or 50). The boxes should still take up
